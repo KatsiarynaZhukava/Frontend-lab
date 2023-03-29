@@ -1,0 +1,279 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.filtration__container {
+    background-color: #fff;
+    left: 0;
+    padding: 10px 0;
+    position: sticky;
+    text-align: center;
+    top: 0;
+    z-index: 999;
+}
+
+.filtration__button {
+    background: #5e5df0;
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 18px;
+    transition: background .3s;
+    width: 160px;
+}
+
+.filtration__button:hover {
+    background: #4242d5;
+}
+
+.filtration__button-selected {
+    background: #007;
+}
+
+.tiles__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.tiles__tile {
+    background-color: #eeeeee;
+    margin: 10px 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.tile-hidden {
+    display: none;
+}
+
+.tile-transparent {
+    opacity: .5;
+}
+
+.tile__wrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100%;
+    position: relative;
+    transition: min-height .6s;
+}
+
+.tiles__tile:hover .tile__wrapper {
+    min-height: calc(100% - 60px);
+}
+
+.tile__icons-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.tile__icon-wrapper_round {
+    align-items: center;
+    background-color: #ececec;
+    border-radius: 50%;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 60px;
+}
+
+.tile__icon-wrapper_round:hover {
+    background-color: #c2c1c1;
+}
+
+.tile__icon_selected {
+    background-color: #807f7f;
+}
+
+.tile__icon_selected:hover {
+    background-color: #343434;
+}
+
+.tile__image-container {
+    padding: 6% 14% 0;
+}
+
+.tile__image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.tile__text-container {
+    padding: 6% 14%;
+    text-align: center;
+}
+
+.tile__title,
+.tile__rating,
+.tile__description,
+.tile__price {
+    margin: 10px 0;
+}
+
+.tile__price_obsolete {
+    text-decoration: line-through;
+}
+
+.tile__price_sale {
+    color: #f00;
+}
+
+.tile__title {
+    color: #9a9a9a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tile__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tile__rating {
+    color: #c5c5c5;
+    font-size: 25px;
+    height: 25px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 1px 0 #a2a2a2;
+    width: 140px;
+}
+
+.tile__rating_fill {
+    color: #f8ea00;
+    display: flex;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 56%;
+    z-index: 1;
+}
+
+.tile__rating_grey {
+    display: flex;
+    padding: 0;
+    z-index: 0;
+}
+
+.tile__price {
+    font-weight: bold;
+}
+
+.tile__add-to-cart-button {
+    background: #297fa4;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    width: 60%;
+}
+
+.tile__add-to-cart-button:hover,
+.tile__add-to-cart-button:focus {
+    background: #14598f;
+    cursor: pointer;
+}
+
+.tiles__tile:hover .tile__add-to-cart-button {
+    visibility: visible;
+}
+
+.tile__add-to-cart-button > i {
+    color: #fff;
+}
+
+
+
+@media (min-width: 1281px) {
+    .tiles__tile {
+        width: calc((100%)/4 - 80px);
+    }
+}
+
+@media (max-width: 1280px) {
+    .tiles__tile {
+        width: calc((100%)/3 - 80px);
+    }
+
+    .tile__add-to-cart-button {
+        width: 85%
+    }
+}
+
+@media (max-width: 960px) {
+    body {
+        font-size: 18px;
+    }
+
+    .tiles__tile {
+        padding: 15px;
+        width: calc((100%)/3 - 70px);
+    }
+
+    .tile__add-to-cart-button {
+        width: 90%
+    }
+}
+
+@media (min-width: 501px) and (max-width: 880px) {
+    body {
+        font-size: 17px;
+    }
+
+    .tiles__tile {
+        padding: 12px;
+        width: calc((100%)/2 - 65px);
+    }
+
+    .filtration__button {
+        width: 155px;
+    }
+
+    .tile__icon-wrapper_round {
+        height: 55px;
+        width: 55px;
+    }
+
+    .tile__text-container {
+        padding: 6% 12%;
+    }
+}
+
+@media (max-width: 660px) {
+    .filtration__button {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .tiles__tile {
+        width: 90%;
+    }
+
+    .tile__icon-wrapper_round {
+        height: 70px;
+        width: 70px;
+    }
+}

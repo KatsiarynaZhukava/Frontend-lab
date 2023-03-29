@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/localStorage.js"></script>
+    <script src="/scripts/filtration.js"></script>
+</head>
+<body>
+    <div class="filtration__container">
+        <div class="filtration__button js-filtration__button-all filtration__button-selected" data-filtertype="all">All</div>
+        <div class="filtration__button js-filtration__button-favourites" data-filtertype="favourite">Favourites</div>
+        <div class="filtration__button js-filtration__button-comparison" data-filtertype="comparison">Comparison</div>
+        <div class="filtration__button js-filtration__checkbox-show-hidden">
+            <input type="checkbox" id="checkbox-show-hidden" value="Show hidden">
+            <label for="checkbox-show-hidden">Show hidden</label>
+        </div>
+    </div>
+    <div class="tiles__container">
+        <div class="tiles__tile" data-productcode="B0001">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/eloquent_javascript.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price">
+                        <span class="tile__price_sale">$12</span>&nbsp;
+                        <span class="tile__price_obsolete">$16</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0002">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/harry_potter_the_chamber_of_secrets.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price">
+                        <span class="tile__price_sale">$12</span>&nbsp;
+                        <span class="tile__price_obsolete">$16</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0003">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/stephen_king_fairy_tale.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0004">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/the_little_dog.webp">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price">
+                        <span class="tile__price_sale">$5</span>&nbsp;
+                        <span class="tile__price_obsolete">$15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0005">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/1984.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0006">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/sascha-sendlbeck-book-animation.gif">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0007">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/clockwork_orange.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0008">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/lord_of_the_flies.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0009">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/harry_potter.jfif">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0010">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/fire_&_blood.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0011">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/exercise_book.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+        <div class="tiles__tile" data-productcode="B0012">
+            <div class="tile__wrapper">
+                <div class="tile__icons-container js-tile__icons-container">
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-display">
+                        <i class="fa fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-favourite">
+                        <i class="fa fa-solid fa-heart fa-lg"></i>
+                    </div>
+                    <div class="tile__icon-wrapper_round js-tile__icon js-tile__icon-comparison">
+                        <i class="fa fa-solid fa-scale-balanced fa-lg"></i>
+                    </div>
+                </div>
+                <div class="tile__image-container">
+                    <img class="tile__image" src="/images/universal_coverage.jpg">
+                </div>
+                <div class="tile__text-container">
+                    <div class="tile__title">Eloquent JavaScript</div>
+                    <div class="tile__rating">
+                        <div class="tile__rating_fill">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tile__rating_grey">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="tile__description">A perfect books for frontend developers</div>
+                    <div class="tile__price"><span>$16</span></div>
+                </div>
+            </div>
+            <div class="tile__add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </div>
+        </div>
+    </div>
+</body>
+</html>
